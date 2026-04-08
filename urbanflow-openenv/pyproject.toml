@@ -15,4 +15,4 @@ dependencies = [
 server = "app:app"
 
 [tool.openenv]
-entrypoint = "app:app"
+entrypoint = "server.app:main"
