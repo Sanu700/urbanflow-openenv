@@ -1,0 +1,8 @@
+[project]
+name = "urbanflow-openenv"
+version = "0.1.0"
+description = "OpenEnv traffic optimization environment"
+requires-python = ">=3.10"
+
+[tool.openenv]
+entrypoint = "app:app"
