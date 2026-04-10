@@ -1,0 +1,155 @@
+# 🚦 UrbanFlow: AI-Powered Traffic Optimization Agent
+
+> *“What if traffic lights could think—and save lives?”*
+
+---
+
+## 🌍 Problem
+
+Every day, millions of people sit in traffic.
+But for someone in an ambulance, **every second matters**.
+
+Current traffic systems are:
+
+* ❌ Static
+* ❌ Unaware of real-time conditions
+* ❌ Unable to prioritize emergencies
+
+This leads to:
+
+* Delayed emergency response 🚑
+* Increased pollution 🌫️
+* Lost time and productivity ⏳
+
+---
+
+## 💡 Our Solution
+
+**UrbanFlow** is an AI-powered traffic control environment built using OpenEnv.
+
+It simulates real-world city traffic where an intelligent agent:
+
+* 🚦 Controls traffic signals dynamically
+* 🚑 Detects and prioritizes emergency vehicles
+* 📉 Reduces congestion and wait times
+
+---
+
+## 🧠 Key Idea
+
+We model traffic as a decision-making problem where an AI agent learns to:
+
+> “Optimize flow while balancing efficiency and urgency.”
+
+---
+
+## ⚙️ Environment Design
+
+### 🔍 Observation Space
+
+The agent observes:
+
+* Traffic density at intersections
+* Current task difficulty
+* Overall congestion levels
+
+### 🎮 Action Space
+
+The agent outputs:
+
+* Traffic signal configurations
+  (e.g., `[0,1,0,1]` → which lanes get green)
+
+### 💰 Reward Function
+
+The agent is rewarded for:
+
+* ✅ Reducing total traffic congestion
+* ✅ Clearing vehicles efficiently
+* ✅ Maintaining smooth flow
+
+And penalized for:
+
+* ❌ High wait times
+* ❌ Inefficient signal usage
+
+---
+
+## 🎯 Tasks
+
+| Level     | Description                                    |
+| --------- | ---------------------------------------------- |
+| 🟢 Easy   | Optimize a single intersection                 |
+| 🟡 Medium | Coordinate multiple intersections              |
+| 🔴 Hard   | Prioritize emergency vehicles under congestion |
+
+Each task includes a **deterministic grader** scoring performance from `0.0 → 1.0`.
+
+---
+
+## 🤖 Inference Pipeline
+
+We use the OpenAI client to:
+
+* Interpret traffic state
+* Generate actions
+* Evaluate performance step-by-step
+
+All outputs follow strict OpenEnv logging format:
+
+```
+[START] ...
+[STEP] ...
+[END] ...
+```
+
+---
+
+## 🐳 How to Run
+
+```bash
+docker build -t urbanflow .
+docker run urbanflow
+```
+
+---
+
+## ☁️ Deployment
+
+This project is deployed on **Hugging Face Spaces (Docker)**
+and follows all OpenEnv validation requirements.
+
+---
+
+## 📊 Why This Matters
+
+Traffic is more than inconvenience.
+
+> It’s about **time, efficiency, and sometimes—life itself.**
+
+UrbanFlow demonstrates how AI can:
+
+* Improve smart city infrastructure
+* Enable faster emergency response
+* Make urban living more efficient
+
+---
+
+## 🚀 Future Work
+
+* Real-world traffic dataset integration
+* Reinforcement learning-based training
+* Live visualization dashboard
+* Integration with smart city APIs
+
+---
+
+## 💬 Final Note
+
+This project is a step toward a future where:
+
+> **Cities don’t just function—they adapt.**
+
+---
+
+✨ Built for the OpenEnv Hackathon
